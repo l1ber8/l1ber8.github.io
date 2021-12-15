@@ -15,7 +15,7 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="./img/icons-512.png" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-		<title>安心回家 Back Home Safe</title>
+		<title>EnterOutsideFree</title>
 		<link href="./css/bootstrap.min.css" rel="stylesheet">
  
 		<style>
@@ -44,20 +44,20 @@
 		<div id="scanner">
 			<div class="header text-center mt-2">
 				<div onclick="goBack()"><img class="scan-headback" src="./img/icon_arrow_left.png"></div>
-				<span class="scan-headtext">掃描二維碼</span>
+				<span class="scan-headtext">Scan the QR Code</span>
 			</div>
 			<div class="qrscanner" id="reader"></div>
 			<div class="container">
 				<div class="shadow">
-					<div class="scan-text1 text-center">掃描二維碼</div>
+					<div class="scan-text1 text-center">Scan the QR Code</div>
 				</div>
 			</div>
 		</div>
 		<div id="localtionDisplay" class="d-none">
 			<div class="disp-container text-center">
 				<div onclick="goBack()"><img class="disp-exit" src="./img/icon_close.png"></div>
-				<div class="disp-line1">你已進入場所</div>
-				<div class="disp-line2" id="localName">去咗火星</div>
+				<div class="disp-line1">You have entered the venue</div>
+				<div class="disp-line2" id="localName">Go to Mars</div>
 				<div class="disp-line3" id="dateTimeDisp">2021-12-31 23:59</div>
 				<img class="disp-line4" src="./img/img_checkin_success.png">
 			</div>
@@ -89,7 +89,7 @@
 			//alert('decode: ' + b64DecodeUnicode(b64Data));
 			var jsonData = JSON.parse(b64DecodeUnicode(b64Data));
 			//alert(jsonData['nameZh']);
-			genLocationHTML(jsonData['nameZh']);
+			genLocationHTML(jsonData['nameEn']);
 		}
 
 		function genLocationHTML(nameZh) {
